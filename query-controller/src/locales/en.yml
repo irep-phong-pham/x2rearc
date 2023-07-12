@@ -1,0 +1,19 @@
+jp:
+  errors:
+    #QA:
+    # S: Sub System Code
+    # A,T: Application | Third Party
+    WA4000: "Bad Request"
+    WA4001: "Unauthorized"
+    WA4003: "Permission denied"
+    WA4004: "Not Found"
+    WA4100: "Token Expired"
+    WA4101: "Invalid Token"
+    WA4102: "Resource already exist"
+    WA5000: "Server Internal Error"
+
+  messages:
+    M001: "ジョブ %{job_id}: crawling %{urls_num} urls"
+    M002: Blacklist is empty
+    M003: "To remove %{filename} but the file does not exist"
+    M004: "something"

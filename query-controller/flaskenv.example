@@ -1,0 +1,6 @@
+SQLALCHEMY_DATABASE_URI=mysql+pymysql://<username>:<password>@<db hostname>:<db port>/<db name>
+# SQLALCHEMY_DATABASE_URI=sqlite://///Users/long_trinh/Projects/IrepFW/webapi-fw-v2/data/mockdb.sqlite3
+TZ='Asia/Tokyo'
+DEBUG=True
+LOCALE=jp
+DEFAULT_ERROR_PREFIX=errors

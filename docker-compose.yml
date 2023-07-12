@@ -1,0 +1,48 @@
+version: '3'
+services:
+  dynamodb:
+    image: amazon/dynamodb-local
+    ports:
+      - 8000:8000
+    volumes:
+      - dynamodb_data:/data
+    command: "-jar DynamoDBLocal.jar -sharedDb"
+  # command-controller:
+  #   build:
+  #     context: ./command-controller
+  #   ports:
+  #     - 5000:5000
+  #   depends_on:
+  #     - dynamodb
+  #   environment:
+  #     - DYNAMODB_ENDPOINT=http://dynamodb:8000
+  # query-controller:
+  #   build:
+  #     context: ./query-controller
+  #   ports:
+  #     - 5001:5000
+  #   depends_on:
+  #     - dynamodb
+  #   environment:
+  #     - DYNAMODB_ENDPOINT=http://dynamodb:8000
+  # query-materializer:
+  #   build:
+  #     context: ./query-materializer
+  #   ports:
+  #     - 5002:5000
+  #   depends_on:
+  #     - dynamodb
+  #   environment:
+  #     - DYNAMODB_ENDPOINT=http://dynamodb:8000
+  # mysql:
+  #   image: mysql:latest
+  #   ports:
+  #     - 3306:3306
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=root
+  #     - MYSQL_DATABASE=your_database_name
+  #   volumes:
+  #     - mysql_data:/var/lib/mysql
+volumes:
+  dynamodb_data:
+  # mysql_data:
